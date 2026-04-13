@@ -685,7 +685,7 @@ class OrderControllerIntegrationTest {
     @Test
     void appPortfolio_requiresAuthentication() throws Exception {
         mockMvc.perform(get("/app/portfolio"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isForbidden());
     }
 
     @Test
